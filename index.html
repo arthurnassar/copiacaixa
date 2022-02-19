@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa protótipo</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="left-nav">
+                <img src="./assets/logo-caixa.png" alt="Logo da caixa">
+                <div id="vertical-line"></div>
+                <p id="sigla">SIPPG</p>
+                <p id="titulo">- Sistema de Gestão de Cartões Pré-pagos</p>
+            </div>
+            <div id="right-nav">
+                <div id="right-nav-div">
+                    <p>Olá, EDUARDO</p>
+                    <p>(c128102)</p>
+                </div>
+                <img src="./assets/nav-bar-icon.png" alt="ícone de saída">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <nav id="vertical-nav" class="closed">
+            <div class="arrow-container"><img id="open-arrow" src="./assets/keyboard_double_arrow_right_black_24dp.svg"
+                    alt="arrow to the right"></div>
+            <div id="opened-container">
+                <div class="whole-tag">
+                    <div class="parent-tag">
+                        <p class="parent-tag-txt">Gestão de vendas</p>
+                        <img id="parent-arrow" src="./assets/round_keyboard_arrow_down_black_24dp.png"
+                            alt="arrow down and up">
+                    </div>
+                    <div id="dropdown1" class="child-closed">
+                        <div class="child-tag">
+                            <!-- TEMPLATE DE UMA TAG -->
+                            <div class="mini-tag">
+                                <!-- LINHA PARA AS TAGS QUE ESTIVEREM ATIVAS -->
+                                <div id="white-line" class="inactive-line"></div>
+                                <!-- ICONE DA TAG -->
+                                <img class="icon" src="./assets/truck-icon.png" alt="truck icon">
+                                <!-- TEXTO DA TAG -->
+                                <p>CAIXA Frota</p>
+                            </div>
+                            <!-- TEMPLATE DE UMA TAG -->
+                            <div class="mini-tag">
+                                <!-- LINHA PARA AS TAGS QUE ESTIVEREM ATIVAS -->
+                                <div id="white-line" class="inactive-line"></div>
+                                <!-- ICONE DA TAG -->
+                                <img class="icon" src="./assets/ticket-icon.png" alt="truck icon">
+                                <!-- TEXTO DA TAG -->
+                                <p>CAIXA Tag</p>
+                            </div>
+                            <!-- TEMPLATE DE UMA TAG -->
+                            <div class="mini-tag">
+                                <!-- LINHA PARA AS TAGS QUE ESTIVEREM ATIVAS -->
+                                <div id="white-line" class="inactive-line"></div>
+                                <!-- ICONE DA TAG (COLOCAR TAG IMG E RETIRAR A DIV CASO QUEIRA COLOCAR UM ÍCONE)-->
+                                <div class="circle"></div>
+                                <!-- TEXTO DA TAG -->
+                                <p>Outro produto</p>
+                            </div>
+                            <!-- TEMPLATE DE UMA TAG -->
+                            <div class="mini-tag">
+                                <!-- LINHA PARA AS TAGS QUE ESTIVEREM ATIVAS -->
+                                <div id="white-line" class="inactive-line"></div>
+                                <!-- ICONE DA TAG (COLOCAR TAG IMG E RETIRAR A DIV CASO QUEIRA COLOCAR UM ÍCONE)-->
+                                <div class="circle"></div>
+                                <!-- TEXTO DA TAG -->
+                                <p>Outro produto</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="whole-tag">
+                    <div class="parent-tag">
+                        <p class="parent-tag-txt">Parametrização</p>
+                        <img id="parent-arrow2" src="./assets/round_keyboard_arrow_down_black_24dp.png"
+                            alt="arrow down and up">
+                    </div>
+                    <div id="dropdown2" class="child-closed">
+                        <div class="child-tag">
+                            <!-- TEMPLATE DE UMA TAG -->
+                            <div class="mini-tag">
+                                <!-- LINHA PARA AS TAGS QUE ESTIVEREM ATIVAS -->
+                                <div id="white-line" class="inactive-line"></div>
+                                <!-- ICONE DA TAG (COLOCAR TAG IMG E RETIRAR A DIV CASO QUEIRA COLOCAR UM ÍCONE)-->
+                                <div class="circle"></div>
+                                <!-- TEXTO DA TAG -->
+                                <p>Produto</p>
+                            </div>
+                            <!-- TEMPLATE DE UMA TAG -->
+                            <div class="mini-tag">
+                                <!-- LINHA PARA AS TAGS QUE ESTIVEREM ATIVAS -->
+                                <div id="white-line" class="inactive-line"></div>
+                                <!-- ICONE DA TAG (COLOCAR TAG IMG E RETIRAR A DIV CASO QUEIRA COLOCAR UM ÍCONE)-->
+                                <div class="circle"></div>
+                                <!-- TEXTO DA TAG -->
+                                <p>Ateste</p>
+                            </div>
+                            <!-- TEMPLATE DE UMA TAG -->
+                            <div class="mini-tag">
+                                <!-- LINHA PARA AS TAGS QUE ESTIVEREM ATIVAS -->
+                                <div id="white-line" class="inactive-line"></div>
+                                <!-- ICONE DA TAG (COLOCAR TAG IMG E RETIRAR A DIV CASO QUEIRA COLOCAR UM ÍCONE)-->
+                                <div class="circle"></div>
+                                <!-- TEXTO DA TAG -->
+                                <p>Metas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </nav>
+        <section id="content">
+            <section id="user-popup-container" class="popup-off">
+                <div id="user-popup">
+                    <div id="top">
+                        <img src="./assets/baseline_person_black_24dp.png" alt="user icon">
+                        <div class="vertical-line"></div>
+                        <p>Usuário Logado</p>
+                        <div class="vertical-line"></div>
+                    </div>
+                    <div id="bottom">
+                        <p class="classe1">Eduardo Marcelo Rosa</p>
+                        <p class="classe1">(c128102)</p>
+                        <p class="classe2">Função: Analista Júnior</p>
+                        <p class="classe2">Lotação: Ag. Buriti</p>
+                        <p class="classe2">Perfil: PPGAGE</p>
+                    </div>
+                </div>
+            </section>
+            <section id="content-header">
+                <div id="tags-container">
+                    <p>Você está em:</p>
+                    <p id="macro-tag"></p>
+                    <p id="micro-tag"></p>
+                </div>
+                <p id="big-txt">Gestão de vendas</p>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div id="div1">
+            <img src="./assets/caixacaixa-removebg-preview.png" alt="logo da caixa economica">
+            <ul>
+                <li>Convênios</li>
+                <li>Pix</li>
+                <li>Consulta</li>
+                <li>Ajuda</li>
+            </ul>
+        </div>
+        <div id="div2"><p>Caixa Econômica Federal - Todos os direitos reservados 2021</p></div>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
