@@ -33,33 +33,29 @@
                     alt="arrow to the right"></div>
             <div id="opened-container">
                 <div class="whole-tag">
-                    <div class="parent-tag">
+                    <div onclick="openAndCloseDropDownMenu('gestaovendas')" class="parent-tag">
                         <p class="parent-tag-txt">Gestão de vendas</p>
-                        <img id="parent-arrow" src="./assets/round_keyboard_arrow_down_black_24dp.png"
+                        <img id="parent-arrow1" src="./assets/round_keyboard_arrow_down_black_24dp.png"
                             alt="arrow down and up">
                     </div>
-                    <div id="dropdown1" class="child-closed">
+                    <div class="child-closed dropdown">
                         <div class="child-tag">
                             <!-- TEMPLATE DE UMA TAG -->
-                            <div class="mini-tag">
-                                <!-- LINHA PARA AS TAGS QUE ESTIVEREM ATIVAS -->
-                                <div id="white-line" class="inactive-line"></div>
+                            <div id="tag1" onclick="activeMenuClass('tag1', 0) " class="mini-tag">
                                 <!-- ICONE DA TAG -->
                                 <img class="icon" src="./assets/truck-icon.png" alt="truck icon">
                                 <!-- TEXTO DA TAG -->
                                 <p>CAIXA Frota</p>
                             </div>
                             <!-- TEMPLATE DE UMA TAG -->
-                            <div class="mini-tag">
-                                <!-- LINHA PARA AS TAGS QUE ESTIVEREM ATIVAS -->
-                                <div id="white-line" class="inactive-line"></div>
+                            <div id="tag2" onclick="activeMenuClass('tag2', 0) " class="mini-tag">
                                 <!-- ICONE DA TAG -->
                                 <img class="icon" src="./assets/ticket-icon.png" alt="truck icon">
                                 <!-- TEXTO DA TAG -->
                                 <p>CAIXA Tag</p>
                             </div>
                             <!-- TEMPLATE DE UMA TAG -->
-                            <div class="mini-tag">
+                            <div id="tag3" onclick="activeMenuClass('tag3', 0) " class="mini-tag">
                                 <!-- LINHA PARA AS TAGS QUE ESTIVEREM ATIVAS -->
                                 <div id="white-line" class="inactive-line"></div>
                                 <!-- ICONE DA TAG (COLOCAR TAG IMG E RETIRAR A DIV CASO QUEIRA COLOCAR UM ÍCONE)-->
@@ -68,9 +64,7 @@
                                 <p>Outro produto</p>
                             </div>
                             <!-- TEMPLATE DE UMA TAG -->
-                            <div class="mini-tag">
-                                <!-- LINHA PARA AS TAGS QUE ESTIVEREM ATIVAS -->
-                                <div id="white-line" class="inactive-line"></div>
+                            <div id="tag4" onclick="activeMenuClass('tag4', 0) " class="mini-tag">
                                 <!-- ICONE DA TAG (COLOCAR TAG IMG E RETIRAR A DIV CASO QUEIRA COLOCAR UM ÍCONE)-->
                                 <div class="circle"></div>
                                 <!-- TEXTO DA TAG -->
@@ -80,35 +74,29 @@
                     </div>
                 </div>
                 <div class="whole-tag">
-                    <div class="parent-tag">
+                    <div onclick="openAndCloseDropDownMenu('parametrizacao')" class="parent-tag">
                         <p class="parent-tag-txt">Parametrização</p>
                         <img id="parent-arrow2" src="./assets/round_keyboard_arrow_down_black_24dp.png"
                             alt="arrow down and up">
                     </div>
-                    <div id="dropdown2" class="child-closed">
+                    <div  class="child-closed dropdown">
                         <div class="child-tag">
                             <!-- TEMPLATE DE UMA TAG -->
-                            <div class="mini-tag">
-                                <!-- LINHA PARA AS TAGS QUE ESTIVEREM ATIVAS -->
-                                <div id="white-line" class="inactive-line"></div>
+                            <div id="tag5" onclick="activeMenuClass('tag5', 1) " class="mini-tag">
                                 <!-- ICONE DA TAG (COLOCAR TAG IMG E RETIRAR A DIV CASO QUEIRA COLOCAR UM ÍCONE)-->
                                 <div class="circle"></div>
                                 <!-- TEXTO DA TAG -->
                                 <p>Produto</p>
                             </div>
                             <!-- TEMPLATE DE UMA TAG -->
-                            <div class="mini-tag">
-                                <!-- LINHA PARA AS TAGS QUE ESTIVEREM ATIVAS -->
-                                <div id="white-line" class="inactive-line"></div>
+                            <div id="tag6" onclick="activeMenuClass('tag6', 1) " class="mini-tag">
                                 <!-- ICONE DA TAG (COLOCAR TAG IMG E RETIRAR A DIV CASO QUEIRA COLOCAR UM ÍCONE)-->
                                 <div class="circle"></div>
                                 <!-- TEXTO DA TAG -->
                                 <p>Ateste</p>
                             </div>
                             <!-- TEMPLATE DE UMA TAG -->
-                            <div class="mini-tag">
-                                <!-- LINHA PARA AS TAGS QUE ESTIVEREM ATIVAS -->
-                                <div id="white-line" class="inactive-line"></div>
+                            <div id="tag7" onclick="activeMenuClass('tag7', 1) "class="mini-tag">
                                 <!-- ICONE DA TAG (COLOCAR TAG IMG E RETIRAR A DIV CASO QUEIRA COLOCAR UM ÍCONE)-->
                                 <div class="circle"></div>
                                 <!-- TEXTO DA TAG -->
@@ -158,7 +146,9 @@
                 <li>Ajuda</li>
             </ul>
         </div>
-        <div id="div2"><p>Caixa Econômica Federal - Todos os direitos reservados 2021</p></div>
+        <div id="div2">
+            <p>Caixa Econômica Federal - Todos os direitos reservados 2021</p>
+        </div>
     </footer>
 
     <script src="./main.js"></script>

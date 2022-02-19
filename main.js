@@ -7,10 +7,8 @@ const parentTags = document.querySelectorAll(".parent-tag");
 const parentTagsTxt = document.querySelectorAll(".parent-tag-txt");
 let childOpen = true;
 let childOpen2 = true;
-const dropDown1 = document.querySelector("#dropdown1");
+const dropDown = document.querySelectorAll(".dropdown");
 const dropDown2 = document.querySelector("#dropdown2");
-const arrow = document.querySelector("#parent-arrow");
-const arrow2 = document.querySelector("#parent-arrow2");
 const macroTag = document.querySelector("#macro-tag");
 const microTag = document.querySelector("#micro-tag");
 let subitens = document.querySelectorAll(".mini-tag p");
@@ -37,147 +35,54 @@ arrowCont.addEventListener("click", () => {
     }
 })
 
-// Open Parent tag subitems (INDEX 0)
-parentTags[0].addEventListener("click", () => {
-    if (childOpen == true) {
-        dropDown1.className = "child-open";
-        arrow.src = "./assets/round_keyboard_arrow_up_black_24dp.png"
-        childOpen = false;
-    }
-    else {
-        dropDown1.className = "child-closed";
-        arrow.src = "./assets/round_keyboard_arrow_down_black_24dp.png"
-        childOpen = true;
-    }
-})
 
 // Open Parent tag subitems (INDEX 1)
-parentTags[1].addEventListener("click", () => {
-    if (childOpen2 == true) {
-        dropDown2.className = "child-open";
-        arrow2.src = "./assets/round_keyboard_arrow_up_black_24dp.png"
-        childOpen2 = false;
+let dropDownOpened = {
+    gestaovendas: false,
+    parametrizacao: false
+};
+
+function openAndCloseDropDownMenu(dropDownName) {
+    let index = Object.keys(dropDownOpened).indexOf(dropDownName);
+    let arrowIndex = index;
+    arrowIndex+=1;
+
+    let arrow = document.querySelector("#parent-arrow" + (arrowIndex));
+    if (dropDownOpened[dropDownName] == false) {
+        dropDown[index].classList.remove("child-closed");
+        dropDown[index].classList.add("child-open")
+        arrow.src = "./assets/round_keyboard_arrow_up_black_24dp.png"
+        dropDownOpened[dropDownName] = true;
     }
     else {
-        dropDown2.className = "child-closed";
-        arrow2.src = "./assets/round_keyboard_arrow_down_black_24dp.png"
-        childOpen2 = true;
+        dropDown[index].classList.remove("child-open")
+        dropDown[index].classList.add("child-closed");
+        arrow.src = "./assets/round_keyboard_arrow_down_black_24dp.png"
+        dropDownOpened[dropDownName] = false;
     }
-})
+}
 
 // Função que muda o nome conforme os botões
-function mudarNome1() {
-    macroTag.innerHTML = parentTagsTxt[0].innerHTML;
-}
-function mudarNome2() {
-    macroTag.innerHTML = parentTagsTxt[1].innerHTML;
-}
-
-parentTags[0].onclick = mudarNome1;
-parentTags[1].onclick = mudarNome2;
-
-
-// Função para mudar os subitens e ativar os mesmos
-function mudarSubitem0() {
-    microTag.innerHTML = "/ " + subitens[0].innerHTML;
-    subitensTag[0].className = "mini-tag inactive-tag";
-    subitensTag[1].className = "mini-tag inactive-tag";
-    subitensTag[2].className = "mini-tag inactive-tag";
-    subitensTag[3].className = "mini-tag inactive-tag";
-    subitensTag[4].className = "mini-tag inactive-tag";
-    subitensTag[5].className = "mini-tag inactive-tag";
-    subitensTag[6].className = "mini-tag inactive-tag";
-    macroTag.innerHTML = parentTagsTxt[0].innerHTML;
-
-    this.className = "mini-tag active-tag";
-}
-function mudarSubitem1() {
-    microTag.innerHTML = "/ " + subitens[1].innerHTML;
-    subitensTag[0].className = "mini-tag inactive-tag";
-    subitensTag[1].className = "mini-tag inactive-tag";
-    subitensTag[2].className = "mini-tag inactive-tag";
-    subitensTag[3].className = "mini-tag inactive-tag";
-    subitensTag[4].className = "mini-tag inactive-tag";
-    subitensTag[5].className = "mini-tag inactive-tag";
-    subitensTag[6].className = "mini-tag inactive-tag";
-    macroTag.innerHTML = parentTagsTxt[0].innerHTML;
-
-    this.className = "mini-tag active-tag";
-}
-function mudarSubitem2() {
-    microTag.innerHTML = "/ " + subitens[2].innerHTML;
-    subitensTag[0].className = "mini-tag inactive-tag";
-    subitensTag[1].className = "mini-tag inactive-tag";
-    subitensTag[2].className = "mini-tag inactive-tag";
-    subitensTag[3].className = "mini-tag inactive-tag";
-    subitensTag[4].className = "mini-tag inactive-tag";
-    subitensTag[5].className = "mini-tag inactive-tag";
-    subitensTag[6].className = "mini-tag inactive-tag";
-    macroTag.innerHTML = parentTagsTxt[0].innerHTML;
-
-    this.className = "mini-tag active-tag";
-}
-function mudarSubitem3() {
-    microTag.innerHTML = "/ " + subitens[3].innerHTML;
-    subitensTag[0].className = "mini-tag inactive-tag";
-    subitensTag[1].className = "mini-tag inactive-tag";
-    subitensTag[2].className = "mini-tag inactive-tag";
-    subitensTag[3].className = "mini-tag inactive-tag";
-    subitensTag[4].className = "mini-tag inactive-tag";
-    subitensTag[5].className = "mini-tag inactive-tag";
-    subitensTag[6].className = "mini-tag inactive-tag";
-    macroTag.innerHTML = parentTagsTxt[0].innerHTML;
-
-    this.className = "mini-tag active-tag";
-}
-function mudarSubitem4() {
-    microTag.innerHTML = "/ " + subitens[4].innerHTML;
-    subitensTag[0].className = "mini-tag inactive-tag";
-    subitensTag[1].className = "mini-tag inactive-tag";
-    subitensTag[2].className = "mini-tag inactive-tag";
-    subitensTag[3].className = "mini-tag inactive-tag";
-    subitensTag[4].className = "mini-tag inactive-tag";
-    subitensTag[5].className = "mini-tag inactive-tag";
-    subitensTag[6].className = "mini-tag inactive-tag";
-    macroTag.innerHTML = parentTagsTxt[1].innerHTML;
-
-    this.className = "mini-tag active-tag";
-}
-function mudarSubitem5() {
-    microTag.innerHTML = "/ " + subitens[5].innerHTML;
-    subitensTag[0].className = "mini-tag inactive-tag";
-    subitensTag[1].className = "mini-tag inactive-tag";
-    subitensTag[2].className = "mini-tag inactive-tag";
-    subitensTag[3].className = "mini-tag inactive-tag";
-    subitensTag[4].className = "mini-tag inactive-tag";
-    subitensTag[5].className = "mini-tag inactive-tag";
-    subitensTag[6].className = "mini-tag inactive-tag";
-    macroTag.innerHTML = parentTagsTxt[1].innerHTML;
-
-    this.className = "mini-tag active-tag";
-}
-function mudarSubitem6() {
-    microTag.innerHTML = "/ " + subitens[6].innerHTML;
-    subitensTag[0].className = "mini-tag inactive-tag";
-    subitensTag[1].className = "mini-tag inactive-tag";
-    subitensTag[2].className = "mini-tag inactive-tag";
-    subitensTag[3].className = "mini-tag inactive-tag";
-    subitensTag[4].className = "mini-tag inactive-tag";
-    subitensTag[5].className = "mini-tag inactive-tag";
-    subitensTag[6].className = "mini-tag inactive-tag";
-    macroTag.innerHTML = parentTagsTxt[1].innerHTML;
-
-    this.className = "mini-tag active-tag";
+function changeMacroTag(index, subItemText) {
+    macroTag.innerHTML = parentTagsTxt[index].innerHTML;
+    microTag.innerHTML = `/ ${subItemText}`;
 }
 
 
-subitensTag[0].onclick = mudarSubitem0;
-subitensTag[1].onclick = mudarSubitem1;
-subitensTag[2].onclick = mudarSubitem2;
-subitensTag[3].onclick = mudarSubitem3;
-subitensTag[4].onclick = mudarSubitem4;
-subitensTag[5].onclick = mudarSubitem5;
-subitensTag[6].onclick = mudarSubitem6;
+function disableMenuClass(){
+    active  = document.getElementsByClassName('active-tag');
+    for (element of active){
+        element.classList.remove('active-tag')
+        
+    }
+}
+
+function activeMenuClass(id, indexChangeMacroTag){
+    disableMenuClass();
+    element  = document.getElementById(id);
+    element.className = element.className + " active-tag ";
+    changeMacroTag(indexChangeMacroTag, element.innerText);
+}
 
 
 // função para mostrar popup
@@ -212,7 +117,7 @@ function popupHide() {
 }
 
 
-rigNavDiv.onmouseenter = mostrarPopup;
+rigNavDiv.onmouseover = mostrarPopup;
 rigNavDiv.onmouseleave = esconderPopup;
-popContainer.onmouseenter = mostrarPopup;
+popContainer.onmouseover = mostrarPopup;
 popContainer.onmouseleave = esconderPopup;
