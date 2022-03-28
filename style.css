@@ -94,13 +94,19 @@ header nav {
 /* Main content */
 main {
     display: flex;
+    flex-direction: row;
+}
+
+#open-arrow {
+    width: 25px;
+    height: 25px;
 }
 
 /* Lateral Menu */
 /* Closed Menu */
 .closed {
-    width: 2%;
-    padding-left: 5px;
+    width: 3%;
+    padding-left: 0;
     height: 70vh;
     transition: all 0.4s ease;
 }
@@ -119,8 +125,10 @@ main {
 
 .arrow-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin: 5px 5px;
+    padding: 5px 5px 5px 0px;
+    align-items: center !important;
 }
 
 /* LATERAL MENU TAGS */
@@ -146,6 +154,16 @@ main {
     background-color: #F7FBFA;
 }
 
+#campo-gestor {
+    font-family: 'Roboto', sans-serif;
+    font-size: 21px;
+    color: #005CA9;
+    font-weight: 900;
+    font-style: italic;
+    margin: 0;
+
+}
+
 .child-tag {
     font-size: 16px;
     font-style: normal;
@@ -168,7 +186,6 @@ main {
 
 .mini-tag {
     display: flex;
-    align-items: center;
     gap: 15px;
     width: 100%;
     height: 30px;
@@ -314,7 +331,7 @@ main {
 }
 
 .popup-off {
-    opacity:0;
+    opacity: 0;
     transition: all 1s ease;
 }
 
@@ -369,4 +386,58 @@ footer div ul {
     justify-content: center;
     color: white;
     padding: 20px;
+}
+
+#cadastrar-proposta1 {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 80%;
+    -webkit-box-shadow: 10px 10px 19px -1px rgba(163, 155, 163, 1);
+    -moz-box-shadow: 10px 10px 19px -1px rgba(163, 155, 163, 1);
+    box-shadow: 10px 10px 19px -1px rgba(163, 155, 163, 1);
+}
+
+#cadastrar-proposta1-top {
+    display: flex;
+    align-self: flex-end;
+    width: fit-content;
+    align-items: center !important;
+    margin: 0;
+    font-weight: 700;
+    color: #426BA3;
+    text-decoration: underline;
+    padding: 15px;
+
+}
+
+#cadastrar-proposta1-top:hover {
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.assinar-btn:hover {
+    cursor: pointer;
+}
+
+.plano-card {
+    width: 100%;
+}
+
+.owl-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    margin: auto;
+}
+
+.owl-nav span {
+   font-size: 50px;
+}
+
+.owl-dots {
+    position: relative;
+    bottom: 50px;
+    width: fit-content;
+    margin: auto;
 }
