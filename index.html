@@ -16,6 +16,12 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -132,7 +138,8 @@
                                 <p>Cadastrar Proposta</p>
                             </div>
                             <!-- TEMPLATE DE UMA TAG -->
-                            <div id="tag9" onclick="activeMenuClass('tag9', 2), insertContent(templateConsulta)" class="mini-tag">
+                            <div id="tag9" onclick="activeMenuClass('tag9', 2), insertContent(templateConsulta)"
+                                class="mini-tag">
                                 <!-- ICONE DA TAG (COLOCAR TAG IMG E RETIRAR A DIV CASO QUEIRA COLOCAR UM ÍCONE)-->
                                 <div class="circle"></div>
                                 <!-- TEXTO DA TAG -->
@@ -171,7 +178,56 @@
                 <p id="big-txt">Gestão de vendas</p>
             </section>
             <section id="pages">
-                
+                <div id="insert-data-for-register"
+                    style="background-color: white; padding: 45px 71px 45px 90px; display: flex; flex-direction: column;">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row position-relative" style="width: fit-content;">
+                            <h2 class="mr-4" style="font-size: 15px; font-weight: 700; color: #005CA9;">NSU: 123456789</h2>
+                            <a style="text-decoration: none; position: absolute; top: 0; right: 0; background-color: blue; border-radius: 50%; padding: 2.5px 7px; font-size: 10px; color: white;" href="#" data-toggle="tooltip" data-placement="right" title="EXPLICACAO SOBRE O NSU">?</a>
+                        </div>
+                        <div class="d-flex flex-row" style="gap: 10px">
+                            <p>Dados desse CPF/CNPJ</p>
+                            <p id="cpf-campo" onload="setCadastroFormCPF()" style="background-color: #EFF4F5; color: #005CA9; padding: 5px 10px; min-width: 180px; font-weight: 700;"> </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <p>
+                                Produto: CAIXA FROTA
+                            </p>
+                        </div>
+                        <div>
+                            <p>Status da proposta</p>
+                            <p id="status-proposta" class="btn" style="background-color: #54BBAB; color: white; font-weight: 600;"> CADASTRANDO </p>
+                        </div>
+                    </div>
+
+                    <form action="">
+
+                        <div class="d-flex align-items-center" style="gap: 10px">
+                            <div style="width: 3px; height: 32px; background-color: #3d95c1;" class="align-items-center"></div>
+                            <h2 style="margin-bottom: 0;">Dados da Empresa</h2>
+                        </div>
+    
+                        <hr style="color:#3d95c1">
+
+                        <div id="dados-da-empresa-inputs" class="d-flex flex-row justify-content-between">
+                            
+                            <div class="d-flex flex-column">
+
+                            </div>
+
+                            <div class="d-flex flex-column">
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+
+                </div>
             </section>
         </section>
     </main>
@@ -190,6 +246,11 @@
         </div>
     </footer>
 
+    <script>
+        $(document).ready(function(){
+            setCadastroFormCPF();
+        });
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -197,7 +258,8 @@
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./main.js"></script>
-   
+  
+
 </body>
 
 </html>

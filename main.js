@@ -824,7 +824,9 @@ function insertPlansForViewPorpouse() {
 }
 
 function verifyCpfAndChangeScreenElements(nome) {
-    if (document.querySelector(nome).value == 1) {
+    if (document.querySelector(nome).value == localStorage.getItem('cpf')) {
+        let cpf = document.querySelector('#input-cnpj-cpf').value
+        localStorage.setItem('cpf', cpf) 
         document.querySelector('#planos').innerHTML = templatePlanos
 
 
@@ -862,3 +864,9 @@ function showPlanText(number) {
 function insertContent(tagReceber) {
     document.querySelector('#pages').innerHTML = tagReceber;
 }
+
+function setCadastroFormCPF () {
+    let cpfNum = localStorage.getItem('cpf')
+        document.querySelector('#cpf-campo').innerText = cpfNum
+}
+
