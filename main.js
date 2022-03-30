@@ -1841,8 +1841,13 @@ function verifyCpfAndChangeScreenElements(nome) {
         })
 
     } else {
+
+        activeMenuClass('tag8', 2)
+
+
+
         document.querySelector('#pages').innerHTML = templateCadastroInputs
-        
+
 
         $('.owl-carousel').owlCarousel({
             lazyLoad: true,
@@ -1864,28 +1869,6 @@ function verifyCpfAndChangeScreenElements(nome) {
     }
 }
 
-function btnCadastrarProposta () {
-    document.querySelector('#pages').innerHTML = templateCadastroInputs
-        
-
-    $('.owl-carousel').owlCarousel({
-        lazyLoad: true,
-        loop: false,
-        margin: 10,
-        nav: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 2
-            },
-            1000: {
-                items: 3
-            }
-        }
-    })
-}
 
 function showPlanText(number) {
     if (document.querySelectorAll('.planText')[number].style.display == "none") {
