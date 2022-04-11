@@ -432,7 +432,7 @@ footer div ul {
 }
 
 .owl-nav span {
-   font-size: 50px;
+    font-size: 50px;
 }
 
 .owl-dots {
@@ -469,6 +469,7 @@ form {
     padding: 50px;
 }
 
+
 #pages h2 {
     color: #005DA8;
     font-weight: 700;
@@ -479,3 +480,17 @@ form {
 #pages p {
     font-weight: 600;
 }
+
+#filtro-propostas-container {
+    background-color: white;
+}
+
+td {
+    padding: 10px 0;
+}
+
+#filtro-propostas-container {
+    -webkit-box-shadow: 5px 12px 5px -20px #686868ce;
+    box-shadow: 5px 12px 12px -10px #686868ce;
+}
+

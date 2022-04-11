@@ -1646,6 +1646,221 @@ style="background-color: white; padding: 45px 71px 45px 90px; display: flex; fle
 
 </div>`
 
+const filtrarPropostas = `
+ <div id="filtrarConteudoPage">
+                    <div class="d-flex justify-content-between">
+                        <h4 style="color: #005CA9; font-weight: 900;">
+                            Resultados
+                        </h4>
+
+                        <div class="pr-1">
+                            <img src="./assets/reload.png" alt="recarregar">
+                            <img src="./assets/download.png" alt="baixar">
+
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <p class="text-muted">
+                        Filtros usados na busca: Nome Fantasia / CNPJ / Produto / Status / Unidade / Código da Unidade
+                    </p>
+
+                    <div id="filtro-propostas-container" class="p-4">
+                        <table class="w-100">
+                            <tr>
+                                <th style="width: 13%;">CNPJ <img src="./assets/unfold-more-horizontal.png"
+                                        alt="setas para cima e para baixo" style="width: 14px; height: 14px;"></th>
+                                <th style="width: 13%;">Razão Social <img src="./assets/unfold-more-horizontal.png"
+                                        alt="setas para cima e para baixo" style="width: 14px; height: 14px;"></th>
+                                <th style="width: 13%;">Status <img src="./assets/unfold-more-horizontal.png"
+                                        alt="setas para cima e para baixo" style="width: 14px; height: 14px;"></th>
+                                <th style="width: 13%;">Enviada em <img src="./assets/unfold-more-horizontal.png"
+                                        alt="setas para cima e para baixo" style="width: 14px; height: 14px;"></th>
+                                <th style="width: 13%;">Atualizada em <img src="./assets/unfold-more-horizontal.png"
+                                        alt="setas para cima e para baixo" style="width: 14px; height: 14px;"></th>
+                                <th style="width: 13%;">Faturamento mensal est. <img
+                                        src="./assets/unfold-more-horizontal.png" alt="setas para cima e para baixo"
+                                        style="width: 14px; height: 14px;"></th>
+                                <th style="width: 13%;">Valor aprovado <img src="./assets/unfold-more-horizontal.png"
+                                        alt="setas para cima e para baixo" style="width: 14px; height: 14px;"></th>
+                                <th style="width: 9%;">Ação <img src="./assets/unfold-more-horizontal.png"
+                                        alt="setas para cima e para baixo" style="width: 14px; height: 14px;"></th>
+                            </tr>
+                            <tr>
+                                <td>XX.XXX.XXX/0001-XX</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td><img src="./assets/view-list.png" alt="ações"> <img src="./assets/chevron-down.png"
+                                        alt="seta para baixo"></td>
+                            </tr>
+                            <tr class="bg-light">
+                                <td>XX.XXX.XXX/0001-XX</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td><img src="./assets/view-list.png" alt="ações"> <img src="./assets/chevron-down.png"
+                                        alt="seta para baixo"></td>
+                            </tr>
+                            <tr>
+                                <td>XX.XXX.XXX/0001-XX</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td><img src="./assets/view-list.png" alt="ações"> <img src="./assets/chevron-down.png"
+                                        alt="seta para baixo"></td>
+                            </tr>
+                            <tr class="bg-light">
+                                <td>XX.XXX.XXX/0001-XX</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td><img src="./assets/view-list.png" alt="ações"> <img src="./assets/chevron-down.png"
+                                        alt="seta para baixo"></td>
+                            </tr>
+                            <tr>
+                                <td>XX.XXX.XXX/0001-XX</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td><img src="./assets/view-list.png" alt="ações"> <img src="./assets/chevron-down.png"
+                                        alt="seta para baixo"></td>
+                            </tr>
+                            <tr class="bg-light">
+                                <td>XX.XXX.XXX/0001-XX</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td><img src="./assets/view-list.png" alt="ações"> <img src="./assets/chevron-down.png"
+                                        alt="seta para baixo"></td>
+                            </tr>
+                            <tr>
+                                <td>XX.XXX.XXX/0001-XX</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td><img src="./assets/view-list.png" alt="ações"> <img src="./assets/chevron-down.png"
+                                        alt="seta para baixo"></td>
+                            </tr>
+                            <tr class="bg-light">
+                                <td>XX.XXX.XXX/0001-XX</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td><img src="./assets/view-list.png" alt="ações"> <img src="./assets/chevron-down.png"
+                                        alt="seta para baixo"></td>
+                            </tr>
+                            <tr>
+                                <td>XX.XXX.XXX/0001-XX</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td><img src="./assets/view-list.png" alt="ações"> <img src="./assets/chevron-down.png"
+                                        alt="seta para baixo"></td>
+                            </tr>
+                            <tr class="bg-light">
+                                <td>XX.XXX.XXX/0001-XX</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td>Item de tabela</td>
+                                <td><img src="./assets/view-list.png" alt="ações"> <img src="./assets/chevron-down.png"
+                                        alt="seta para baixo"></td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-5 py-2 justify-content-end">
+                        <p>
+                            150 resultados
+                        </p>
+                        <div class="d-flex gap-2">
+                            <p>
+                                Mostrar:
+                            </p>
+
+                            <select style="height: fit-content;" class="ml-5" name="mostrarQuant" id="mostratQuant">
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                            </select>
+
+                        </div>
+
+                        <div class="d-flex gap-3">
+                            <span>
+                                < </span>
+
+                                    <div id="table-pages" class="d-flex gap-3">
+                                        <p>
+                                            1
+                                        </p>
+                                        <p>
+                                            2
+                                        </p>
+
+                                        <p>
+                                            ...
+                                        </p>
+
+                                        <p>
+                                            10
+                                        </p>
+
+                                        <p>
+                                            15
+                                        </p>
+
+
+                                    </div>
+
+                                    <span>
+                                        >
+                                    </span>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <p>
+                                Ir para:
+                            </p>
+
+                            <input style="width: 20px; height: fit-content;" class="text-center" type="text" value="1">
+
+                        </div>
+                    </div>
+                </div>
+`
 
 
 

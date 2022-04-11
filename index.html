@@ -126,7 +126,7 @@
                     <div class="child-closed dropdown">
                         <div class="child-tag">
                             <!-- TEMPLATE DE UMA TAG -->
-                            <div id="tag8" onclick="activeMenuClass('tag8', 2), btnCadastrarProposta()"
+                            <div id="tag8" onclick="activeMenuClass('tag8', 2), insertContent(templateCadastroInputs)"
                                 class="mini-tag">
                                 <!-- ICONE DA TAG (COLOCAR TAG IMG E RETIRAR A DIV CASO QUEIRA COLOCAR UM ÍCONE)-->
                                 <div class="circle"></div>
@@ -141,11 +141,19 @@
                                 <!-- TEXTO DA TAG -->
                                 <p>Consultar Proposta</p>
                             </div>
+                            <!-- TEMPLATE DE UMA TAG -->
+                            <div id="tag10" onclick="activeMenuClass('tag10', 2), insertContent(filtrarPropostas)"
+                                class="mini-tag">
+                                <!-- ICONE DA TAG (COLOCAR TAG IMG E RETIRAR A DIV CASO QUEIRA COLOCAR UM ÍCONE)-->
+                                <div class="circle"></div>
+                                <!-- TEXTO DA TAG -->
+                                <p>Filtrar Proposta</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </nav>
         <section id="content">
             <section id="user-popup-container" class="popup-off">
@@ -174,6 +182,7 @@
                 <p id="big-txt">Gestão de vendas</p>
             </section>
             <section id="pages">
+
                
             </section>
         </section>
